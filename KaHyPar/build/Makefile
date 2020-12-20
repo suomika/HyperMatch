@@ -278,19 +278,6 @@ KaHyPar/fast:
 .PHONY : KaHyPar/fast
 
 #=============================================================================
-# Target rules for targets named hgr_to_mtx_test
-
-# Build rule for target.
-hgr_to_mtx_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hgr_to_mtx_test
-.PHONY : hgr_to_mtx_test
-
-# fast build rule for target.
-hgr_to_mtx_test/fast:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
-.PHONY : hgr_to_mtx_test/fast
-
-#=============================================================================
 # Target rules for targets named repeats_to_hgr_conversion_test
 
 # Build rule for target.
@@ -328,32 +315,6 @@ cnf_to_hgr_converter_test: cmake_check_build_system
 cnf_to_hgr_converter_test/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
 .PHONY : cnf_to_hgr_converter_test/fast
-
-#=============================================================================
-# Target rules for targets named HgrToMtx
-
-# Build rule for target.
-HgrToMtx: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HgrToMtx
-.PHONY : HgrToMtx
-
-# fast build rule for target.
-HgrToMtx/fast:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
-.PHONY : HgrToMtx/fast
-
-#=============================================================================
-# Target rules for targets named bookshelf_to_hgr_converter_test
-
-# Build rule for target.
-bookshelf_to_hgr_converter_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bookshelf_to_hgr_converter_test
-.PHONY : bookshelf_to_hgr_converter_test
-
-# fast build rule for target.
-bookshelf_to_hgr_converter_test/fast:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
-.PHONY : bookshelf_to_hgr_converter_test/fast
 
 #=============================================================================
 # Target rules for targets named mtx_to_hgr_converter_test
@@ -419,6 +380,32 @@ HgrToMondriaanMtx: cmake_check_build_system
 HgrToMondriaanMtx/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMondriaanMtx.dir/build.make tools/CMakeFiles/HgrToMondriaanMtx.dir/build
 .PHONY : HgrToMondriaanMtx/fast
+
+#=============================================================================
+# Target rules for targets named bookshelf_to_hgr_converter_test
+
+# Build rule for target.
+bookshelf_to_hgr_converter_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bookshelf_to_hgr_converter_test
+.PHONY : bookshelf_to_hgr_converter_test
+
+# fast build rule for target.
+bookshelf_to_hgr_converter_test/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
+.PHONY : bookshelf_to_hgr_converter_test/fast
+
+#=============================================================================
+# Target rules for targets named HgrToMtx
+
+# Build rule for target.
+HgrToMtx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HgrToMtx
+.PHONY : HgrToMtx
+
+# fast build rule for target.
+HgrToMtx/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
+.PHONY : HgrToMtx/fast
 
 #=============================================================================
 # Target rules for targets named RepeatsToHgr
@@ -523,6 +510,32 @@ HgrToPaToH: cmake_check_build_system
 HgrToPaToH/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToPaToH.dir/build.make tools/CMakeFiles/HgrToPaToH.dir/build
 .PHONY : HgrToPaToH/fast
+
+#=============================================================================
+# Target rules for targets named hgr_to_mtx_test
+
+# Build rule for target.
+hgr_to_mtx_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hgr_to_mtx_test
+.PHONY : hgr_to_mtx_test
+
+# fast build rule for target.
+hgr_to_mtx_test/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
+.PHONY : hgr_to_mtx_test/fast
+
+#=============================================================================
+# Target rules for targets named HgrToGraph
+
+# Build rule for target.
+HgrToGraph: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HgrToGraph
+.PHONY : HgrToGraph
+
+# fast build rule for target.
+HgrToGraph/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/build
+.PHONY : HgrToGraph/fast
 
 #=============================================================================
 # Target rules for targets named VerifyPartition
@@ -1254,6 +1267,7 @@ help:
 	@echo "... HgrToBipartiteGraphML"
 	@echo "... HgrToBipartiteMetisGraph"
 	@echo "... HgrToEdgeList"
+	@echo "... HgrToGraph"
 	@echo "... HgrToHypergraphML"
 	@echo "... HgrToMondriaanMtx"
 	@echo "... HgrToMtx"

@@ -96,18 +96,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.19.1/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.19.1/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -130,6 +118,18 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.19.1/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.19.1/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -187,21 +187,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tools/CMakeFiles/hgr_to_mtx_test.dir/rule:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/hgr_to_mtx_test.dir/rule
-.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/rule
-
-# Convenience name for target.
-hgr_to_mtx_test: tools/CMakeFiles/hgr_to_mtx_test.dir/rule
-
-.PHONY : hgr_to_mtx_test
-
-# fast build rule for target.
-hgr_to_mtx_test/fast:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
-.PHONY : hgr_to_mtx_test/fast
-
-# Convenience name for target.
 tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/rule:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/rule
 .PHONY : tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/rule
@@ -245,36 +230,6 @@ cnf_to_hgr_converter_test: tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
 cnf_to_hgr_converter_test/fast:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
 .PHONY : cnf_to_hgr_converter_test/fast
-
-# Convenience name for target.
-tools/CMakeFiles/HgrToMtx.dir/rule:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToMtx.dir/rule
-.PHONY : tools/CMakeFiles/HgrToMtx.dir/rule
-
-# Convenience name for target.
-HgrToMtx: tools/CMakeFiles/HgrToMtx.dir/rule
-
-.PHONY : HgrToMtx
-
-# fast build rule for target.
-HgrToMtx/fast:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
-.PHONY : HgrToMtx/fast
-
-# Convenience name for target.
-tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
-.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
-
-# Convenience name for target.
-bookshelf_to_hgr_converter_test: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
-
-.PHONY : bookshelf_to_hgr_converter_test
-
-# fast build rule for target.
-bookshelf_to_hgr_converter_test/fast:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
-.PHONY : bookshelf_to_hgr_converter_test/fast
 
 # Convenience name for target.
 tools/CMakeFiles/mtx_to_hgr_converter_test.dir/rule:
@@ -350,6 +305,36 @@ HgrToMondriaanMtx: tools/CMakeFiles/HgrToMondriaanMtx.dir/rule
 HgrToMondriaanMtx/fast:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMondriaanMtx.dir/build.make tools/CMakeFiles/HgrToMondriaanMtx.dir/build
 .PHONY : HgrToMondriaanMtx/fast
+
+# Convenience name for target.
+tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
+.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
+
+# Convenience name for target.
+bookshelf_to_hgr_converter_test: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
+
+.PHONY : bookshelf_to_hgr_converter_test
+
+# fast build rule for target.
+bookshelf_to_hgr_converter_test/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
+.PHONY : bookshelf_to_hgr_converter_test/fast
+
+# Convenience name for target.
+tools/CMakeFiles/HgrToMtx.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToMtx.dir/rule
+.PHONY : tools/CMakeFiles/HgrToMtx.dir/rule
+
+# Convenience name for target.
+HgrToMtx: tools/CMakeFiles/HgrToMtx.dir/rule
+
+.PHONY : HgrToMtx
+
+# fast build rule for target.
+HgrToMtx/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
+.PHONY : HgrToMtx/fast
 
 # Convenience name for target.
 tools/CMakeFiles/RepeatsToHgr.dir/rule:
@@ -470,6 +455,36 @@ HgrToPaToH: tools/CMakeFiles/HgrToPaToH.dir/rule
 HgrToPaToH/fast:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToPaToH.dir/build.make tools/CMakeFiles/HgrToPaToH.dir/build
 .PHONY : HgrToPaToH/fast
+
+# Convenience name for target.
+tools/CMakeFiles/hgr_to_mtx_test.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/hgr_to_mtx_test.dir/rule
+.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/rule
+
+# Convenience name for target.
+hgr_to_mtx_test: tools/CMakeFiles/hgr_to_mtx_test.dir/rule
+
+.PHONY : hgr_to_mtx_test
+
+# fast build rule for target.
+hgr_to_mtx_test/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
+.PHONY : hgr_to_mtx_test/fast
+
+# Convenience name for target.
+tools/CMakeFiles/HgrToGraph.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToGraph.dir/rule
+.PHONY : tools/CMakeFiles/HgrToGraph.dir/rule
+
+# Convenience name for target.
+HgrToGraph: tools/CMakeFiles/HgrToGraph.dir/rule
+
+.PHONY : HgrToGraph
+
+# fast build rule for target.
+HgrToGraph/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/build
+.PHONY : HgrToGraph/fast
 
 # Convenience name for target.
 tools/CMakeFiles/VerifyPartition.dir/rule:
@@ -984,6 +999,33 @@ hgr_to_edge_list_converter.cc.s:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToEdgeList.dir/build.make tools/CMakeFiles/HgrToEdgeList.dir/hgr_to_edge_list_converter.cc.s
 .PHONY : hgr_to_edge_list_converter.cc.s
 
+hgr_to_graph_converter.o: hgr_to_graph_converter.cc.o
+
+.PHONY : hgr_to_graph_converter.o
+
+# target to build an object file
+hgr_to_graph_converter.cc.o:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o
+.PHONY : hgr_to_graph_converter.cc.o
+
+hgr_to_graph_converter.i: hgr_to_graph_converter.cc.i
+
+.PHONY : hgr_to_graph_converter.i
+
+# target to preprocess a source file
+hgr_to_graph_converter.cc.i:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.i
+.PHONY : hgr_to_graph_converter.cc.i
+
+hgr_to_graph_converter.s: hgr_to_graph_converter.cc.s
+
+.PHONY : hgr_to_graph_converter.s
+
+# target to generate assembly for a file
+hgr_to_graph_converter.cc.s:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.s
+.PHONY : hgr_to_graph_converter.cc.s
+
 hgr_to_hypergraphml_converter.o: hgr_to_hypergraphml_converter.cc.o
 
 .PHONY : hgr_to_hypergraphml_converter.o
@@ -1422,6 +1464,7 @@ help:
 	@echo "... HgrToBipartiteGraphML"
 	@echo "... HgrToBipartiteMetisGraph"
 	@echo "... HgrToEdgeList"
+	@echo "... HgrToGraph"
 	@echo "... HgrToHypergraphML"
 	@echo "... HgrToMondriaanMtx"
 	@echo "... HgrToMtx"
@@ -1481,6 +1524,9 @@ help:
 	@echo "... hgr_to_edge_list_converter.o"
 	@echo "... hgr_to_edge_list_converter.i"
 	@echo "... hgr_to_edge_list_converter.s"
+	@echo "... hgr_to_graph_converter.o"
+	@echo "... hgr_to_graph_converter.i"
+	@echo "... hgr_to_graph_converter.s"
 	@echo "... hgr_to_hypergraphml_converter.o"
 	@echo "... hgr_to_hypergraphml_converter.i"
 	@echo "... hgr_to_hypergraphml_converter.s"

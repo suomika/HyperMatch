@@ -585,17 +585,16 @@ tests/utils/clean: tests/utils/CMakeFiles/math_test.dir/clean
 # Directory level rules for directory tools
 
 # Recursive "all" directory target.
-tools/all: tools/CMakeFiles/hgr_to_mtx_test.dir/all
 tools/all: tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/all
 tools/all: tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/all
 tools/all: tools/CMakeFiles/cnf_to_hgr_converter_test.dir/all
-tools/all: tools/CMakeFiles/HgrToMtx.dir/all
-tools/all: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
 tools/all: tools/CMakeFiles/mtx_to_hgr_converter_test.dir/all
 tools/all: tools/CMakeFiles/CalculateRelaxedEpsilon.dir/all
 tools/all: tools/CMakeFiles/GraphToHgr.dir/all
 tools/all: tools/CMakeFiles/HgrToBipartiteGraphML.dir/all
 tools/all: tools/CMakeFiles/HgrToMondriaanMtx.dir/all
+tools/all: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
+tools/all: tools/CMakeFiles/HgrToMtx.dir/all
 tools/all: tools/CMakeFiles/RepeatsToHgr.dir/all
 tools/all: tools/CMakeFiles/BookshelfToHgr.dir/all
 tools/all: tools/CMakeFiles/EvaluateMondriaanPartition.dir/all
@@ -604,6 +603,8 @@ tools/all: tools/CMakeFiles/HypergraphStats.dir/all
 tools/all: tools/CMakeFiles/HgrToBipartiteMetisGraph.dir/all
 tools/all: tools/CMakeFiles/DegreePinDistribution.dir/all
 tools/all: tools/CMakeFiles/HgrToPaToH.dir/all
+tools/all: tools/CMakeFiles/hgr_to_mtx_test.dir/all
+tools/all: tools/CMakeFiles/HgrToGraph.dir/all
 tools/all: tools/CMakeFiles/VerifyPartition.dir/all
 tools/all: tools/CMakeFiles/HgrToHypergraphML.dir/all
 tools/all: tools/CMakeFiles/RemoveHeavyNodes.dir/all
@@ -622,17 +623,16 @@ tools/preinstall:
 .PHONY : tools/preinstall
 
 # Recursive "clean" directory target.
-tools/clean: tools/CMakeFiles/hgr_to_mtx_test.dir/clean
 tools/clean: tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/clean
 tools/clean: tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/clean
 tools/clean: tools/CMakeFiles/cnf_to_hgr_converter_test.dir/clean
-tools/clean: tools/CMakeFiles/HgrToMtx.dir/clean
-tools/clean: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
 tools/clean: tools/CMakeFiles/mtx_to_hgr_converter_test.dir/clean
 tools/clean: tools/CMakeFiles/CalculateRelaxedEpsilon.dir/clean
 tools/clean: tools/CMakeFiles/GraphToHgr.dir/clean
 tools/clean: tools/CMakeFiles/HgrToBipartiteGraphML.dir/clean
 tools/clean: tools/CMakeFiles/HgrToMondriaanMtx.dir/clean
+tools/clean: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
+tools/clean: tools/CMakeFiles/HgrToMtx.dir/clean
 tools/clean: tools/CMakeFiles/RepeatsToHgr.dir/clean
 tools/clean: tools/CMakeFiles/BookshelfToHgr.dir/clean
 tools/clean: tools/CMakeFiles/EvaluateMondriaanPartition.dir/clean
@@ -641,6 +641,8 @@ tools/clean: tools/CMakeFiles/HypergraphStats.dir/clean
 tools/clean: tools/CMakeFiles/HgrToBipartiteMetisGraph.dir/clean
 tools/clean: tools/CMakeFiles/DegreePinDistribution.dir/clean
 tools/clean: tools/CMakeFiles/HgrToPaToH.dir/clean
+tools/clean: tools/CMakeFiles/hgr_to_mtx_test.dir/clean
+tools/clean: tools/CMakeFiles/HgrToGraph.dir/clean
 tools/clean: tools/CMakeFiles/VerifyPartition.dir/clean
 tools/clean: tools/CMakeFiles/HgrToHypergraphML.dir/clean
 tools/clean: tools/CMakeFiles/RemoveHeavyNodes.dir/clean
@@ -714,12 +716,12 @@ CMakeFiles/AnalyzeModifiedSources.dir/clean:
 external_tools/googletest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/CMakeFiles/gmock.dir/build.make external_tools/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/CMakeFiles/gmock.dir/build.make external_tools/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=44,45 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=45 "Built target gmock"
 .PHONY : external_tools/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 external_tools/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_tools/googletest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : external_tools/googletest/googlemock/CMakeFiles/gmock.dir/rule
@@ -741,12 +743,12 @@ external_tools/googletest/googlemock/CMakeFiles/gmock.dir/clean:
 external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=46,47 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=46,47,48 "Built target gmock_main"
 .PHONY : external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : external_tools/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
@@ -773,7 +775,7 @@ external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: extern
 
 # Build rule for subdir invocation for target.
 external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
@@ -795,12 +797,12 @@ external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
 external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=53,54 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=54 "Built target gtest"
 .PHONY : external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
@@ -822,12 +824,12 @@ external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 kahypar/application/CMakeFiles/KaHyPar.dir/all:
 	$(MAKE) $(MAKESILENT) -f kahypar/application/CMakeFiles/KaHyPar.dir/build.make kahypar/application/CMakeFiles/KaHyPar.dir/depend
 	$(MAKE) $(MAKESILENT) -f kahypar/application/CMakeFiles/KaHyPar.dir/build.make kahypar/application/CMakeFiles/KaHyPar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=23 "Built target KaHyPar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=23,24 "Built target KaHyPar"
 .PHONY : kahypar/application/CMakeFiles/KaHyPar.dir/all
 
 # Build rule for subdir invocation for target.
 kahypar/application/CMakeFiles/KaHyPar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kahypar/application/CMakeFiles/KaHyPar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : kahypar/application/CMakeFiles/KaHyPar.dir/rule
@@ -843,34 +845,6 @@ kahypar/application/CMakeFiles/KaHyPar.dir/clean:
 .PHONY : kahypar/application/CMakeFiles/KaHyPar.dir/clean
 
 #=============================================================================
-# Target rules for target tools/CMakeFiles/hgr_to_mtx_test.dir
-
-# All Build rule for target.
-tools/CMakeFiles/hgr_to_mtx_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-tools/CMakeFiles/hgr_to_mtx_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=57 "Built target hgr_to_mtx_test"
-.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/all
-
-# Build rule for subdir invocation for target.
-tools/CMakeFiles/hgr_to_mtx_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/hgr_to_mtx_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
-.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/rule
-
-# Convenience name for target.
-hgr_to_mtx_test: tools/CMakeFiles/hgr_to_mtx_test.dir/rule
-
-.PHONY : hgr_to_mtx_test
-
-# clean rule for target.
-tools/CMakeFiles/hgr_to_mtx_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/clean
-.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/clean
-
-#=============================================================================
 # Target rules for target tools/CMakeFiles/repeats_to_hgr_conversion_test.dir
 
 # All Build rule for target.
@@ -883,7 +857,7 @@ tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/all: external_tools/googlete
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/rule
@@ -906,7 +880,7 @@ tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/all: external_tools/google
 tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/build.make tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/build.make tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=56 "Built target hgr_to_edge_list_conversion_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=56,57 "Built target hgr_to_edge_list_conversion_test"
 .PHONY : tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -934,12 +908,12 @@ tools/CMakeFiles/cnf_to_hgr_converter_test.dir/all: external_tools/googletest/go
 tools/CMakeFiles/cnf_to_hgr_converter_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=35 "Built target cnf_to_hgr_converter_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=36 "Built target cnf_to_hgr_converter_test"
 .PHONY : tools/CMakeFiles/cnf_to_hgr_converter_test.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/cnf_to_hgr_converter_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
@@ -955,61 +929,6 @@ tools/CMakeFiles/cnf_to_hgr_converter_test.dir/clean:
 .PHONY : tools/CMakeFiles/cnf_to_hgr_converter_test.dir/clean
 
 #=============================================================================
-# Target rules for target tools/CMakeFiles/HgrToMtx.dir
-
-# All Build rule for target.
-tools/CMakeFiles/HgrToMtx.dir/all:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/depend
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=17,18 "Built target HgrToMtx"
-.PHONY : tools/CMakeFiles/HgrToMtx.dir/all
-
-# Build rule for subdir invocation for target.
-tools/CMakeFiles/HgrToMtx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToMtx.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
-.PHONY : tools/CMakeFiles/HgrToMtx.dir/rule
-
-# Convenience name for target.
-HgrToMtx: tools/CMakeFiles/HgrToMtx.dir/rule
-
-.PHONY : HgrToMtx
-
-# clean rule for target.
-tools/CMakeFiles/HgrToMtx.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/clean
-.PHONY : tools/CMakeFiles/HgrToMtx.dir/clean
-
-#=============================================================================
-# Target rules for target tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir
-
-# All Build rule for target.
-tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=34 "Built target bookshelf_to_hgr_converter_test"
-.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
-
-# Build rule for subdir invocation for target.
-tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
-.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
-
-# Convenience name for target.
-bookshelf_to_hgr_converter_test: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
-
-.PHONY : bookshelf_to_hgr_converter_test
-
-# clean rule for target.
-tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
-.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
-
-#=============================================================================
 # Target rules for target tools/CMakeFiles/mtx_to_hgr_converter_test.dir
 
 # All Build rule for target.
@@ -1022,7 +941,7 @@ tools/CMakeFiles/mtx_to_hgr_converter_test.dir/all: external_tools/googletest/go
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/mtx_to_hgr_converter_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/mtx_to_hgr_converter_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/mtx_to_hgr_converter_test.dir/rule
@@ -1125,12 +1044,12 @@ tools/CMakeFiles/HgrToBipartiteGraphML.dir/clean:
 tools/CMakeFiles/HgrToMondriaanMtx.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMondriaanMtx.dir/build.make tools/CMakeFiles/HgrToMondriaanMtx.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMondriaanMtx.dir/build.make tools/CMakeFiles/HgrToMondriaanMtx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=16 "Built target HgrToMondriaanMtx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=17,18 "Built target HgrToMondriaanMtx"
 .PHONY : tools/CMakeFiles/HgrToMondriaanMtx.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/HgrToMondriaanMtx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToMondriaanMtx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/HgrToMondriaanMtx.dir/rule
@@ -1146,13 +1065,68 @@ tools/CMakeFiles/HgrToMondriaanMtx.dir/clean:
 .PHONY : tools/CMakeFiles/HgrToMondriaanMtx.dir/clean
 
 #=============================================================================
+# Target rules for target tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir
+
+# All Build rule for target.
+tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=35 "Built target bookshelf_to_hgr_converter_test"
+.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
+
+# Convenience name for target.
+bookshelf_to_hgr_converter_test: tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/rule
+
+.PHONY : bookshelf_to_hgr_converter_test
+
+# clean rule for target.
+tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
+.PHONY : tools/CMakeFiles/bookshelf_to_hgr_converter_test.dir/clean
+
+#=============================================================================
+# Target rules for target tools/CMakeFiles/HgrToMtx.dir
+
+# All Build rule for target.
+tools/CMakeFiles/HgrToMtx.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=19 "Built target HgrToMtx"
+.PHONY : tools/CMakeFiles/HgrToMtx.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/HgrToMtx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToMtx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/HgrToMtx.dir/rule
+
+# Convenience name for target.
+HgrToMtx: tools/CMakeFiles/HgrToMtx.dir/rule
+
+.PHONY : HgrToMtx
+
+# clean rule for target.
+tools/CMakeFiles/HgrToMtx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/clean
+.PHONY : tools/CMakeFiles/HgrToMtx.dir/clean
+
+#=============================================================================
 # Target rules for target tools/CMakeFiles/RepeatsToHgr.dir
 
 # All Build rule for target.
 tools/CMakeFiles/RepeatsToHgr.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/RepeatsToHgr.dir/build.make tools/CMakeFiles/RepeatsToHgr.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/RepeatsToHgr.dir/build.make tools/CMakeFiles/RepeatsToHgr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=29 "Built target RepeatsToHgr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=30 "Built target RepeatsToHgr"
 .PHONY : tools/CMakeFiles/RepeatsToHgr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1233,12 +1207,12 @@ tools/CMakeFiles/EvaluateMondriaanPartition.dir/clean:
 tools/CMakeFiles/CreateWeightedHgr.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/CreateWeightedHgr.dir/build.make tools/CMakeFiles/CreateWeightedHgr.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/CreateWeightedHgr.dir/build.make tools/CMakeFiles/CreateWeightedHgr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=6 "Built target CreateWeightedHgr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=5,6 "Built target CreateWeightedHgr"
 .PHONY : tools/CMakeFiles/CreateWeightedHgr.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/CreateWeightedHgr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/CreateWeightedHgr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/CreateWeightedHgr.dir/rule
@@ -1260,12 +1234,12 @@ tools/CMakeFiles/CreateWeightedHgr.dir/clean:
 tools/CMakeFiles/HypergraphStats.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HypergraphStats.dir/build.make tools/CMakeFiles/HypergraphStats.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HypergraphStats.dir/build.make tools/CMakeFiles/HypergraphStats.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=21,22 "Built target HypergraphStats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=22 "Built target HypergraphStats"
 .PHONY : tools/CMakeFiles/HypergraphStats.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/HypergraphStats.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HypergraphStats.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/HypergraphStats.dir/rule
@@ -1341,7 +1315,7 @@ tools/CMakeFiles/DegreePinDistribution.dir/clean:
 tools/CMakeFiles/HgrToPaToH.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToPaToH.dir/build.make tools/CMakeFiles/HgrToPaToH.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToPaToH.dir/build.make tools/CMakeFiles/HgrToPaToH.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=19 "Built target HgrToPaToH"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=20 "Built target HgrToPaToH"
 .PHONY : tools/CMakeFiles/HgrToPaToH.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1362,13 +1336,68 @@ tools/CMakeFiles/HgrToPaToH.dir/clean:
 .PHONY : tools/CMakeFiles/HgrToPaToH.dir/clean
 
 #=============================================================================
+# Target rules for target tools/CMakeFiles/hgr_to_mtx_test.dir
+
+# All Build rule for target.
+tools/CMakeFiles/hgr_to_mtx_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+tools/CMakeFiles/hgr_to_mtx_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=58 "Built target hgr_to_mtx_test"
+.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/hgr_to_mtx_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/hgr_to_mtx_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/rule
+
+# Convenience name for target.
+hgr_to_mtx_test: tools/CMakeFiles/hgr_to_mtx_test.dir/rule
+
+.PHONY : hgr_to_mtx_test
+
+# clean rule for target.
+tools/CMakeFiles/hgr_to_mtx_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/hgr_to_mtx_test.dir/build.make tools/CMakeFiles/hgr_to_mtx_test.dir/clean
+.PHONY : tools/CMakeFiles/hgr_to_mtx_test.dir/clean
+
+#=============================================================================
+# Target rules for target tools/CMakeFiles/HgrToGraph.dir
+
+# All Build rule for target.
+tools/CMakeFiles/HgrToGraph.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=15 "Built target HgrToGraph"
+.PHONY : tools/CMakeFiles/HgrToGraph.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/HgrToGraph.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/HgrToGraph.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/HgrToGraph.dir/rule
+
+# Convenience name for target.
+HgrToGraph: tools/CMakeFiles/HgrToGraph.dir/rule
+
+.PHONY : HgrToGraph
+
+# clean rule for target.
+tools/CMakeFiles/HgrToGraph.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToGraph.dir/build.make tools/CMakeFiles/HgrToGraph.dir/clean
+.PHONY : tools/CMakeFiles/HgrToGraph.dir/clean
+
+#=============================================================================
 # Target rules for target tools/CMakeFiles/VerifyPartition.dir
 
 # All Build rule for target.
 tools/CMakeFiles/VerifyPartition.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/VerifyPartition.dir/build.make tools/CMakeFiles/VerifyPartition.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/VerifyPartition.dir/build.make tools/CMakeFiles/VerifyPartition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=30 "Built target VerifyPartition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=31 "Built target VerifyPartition"
 .PHONY : tools/CMakeFiles/VerifyPartition.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1395,7 +1424,7 @@ tools/CMakeFiles/VerifyPartition.dir/clean:
 tools/CMakeFiles/HgrToHypergraphML.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToHypergraphML.dir/build.make tools/CMakeFiles/HgrToHypergraphML.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToHypergraphML.dir/build.make tools/CMakeFiles/HgrToHypergraphML.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=15 "Built target HgrToHypergraphML"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=16 "Built target HgrToHypergraphML"
 .PHONY : tools/CMakeFiles/HgrToHypergraphML.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1422,12 +1451,12 @@ tools/CMakeFiles/HgrToHypergraphML.dir/clean:
 tools/CMakeFiles/RemoveHeavyNodes.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/RemoveHeavyNodes.dir/build.make tools/CMakeFiles/RemoveHeavyNodes.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/RemoveHeavyNodes.dir/build.make tools/CMakeFiles/RemoveHeavyNodes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=28 "Built target RemoveHeavyNodes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=28,29 "Built target RemoveHeavyNodes"
 .PHONY : tools/CMakeFiles/RemoveHeavyNodes.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/RemoveHeavyNodes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/RemoveHeavyNodes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/RemoveHeavyNodes.dir/rule
@@ -1449,7 +1478,7 @@ tools/CMakeFiles/RemoveHeavyNodes.dir/clean:
 tools/CMakeFiles/MtxToHgr.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToHgr.dir/build.make tools/CMakeFiles/MtxToHgr.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToHgr.dir/build.make tools/CMakeFiles/MtxToHgr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=24,25 "Built target MtxToHgr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=25,26 "Built target MtxToHgr"
 .PHONY : tools/CMakeFiles/MtxToHgr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1476,12 +1505,12 @@ tools/CMakeFiles/MtxToHgr.dir/clean:
 tools/CMakeFiles/MtxToLAMAHgr.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToLAMAHgr.dir/build.make tools/CMakeFiles/MtxToLAMAHgr.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToLAMAHgr.dir/build.make tools/CMakeFiles/MtxToLAMAHgr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=26,27 "Built target MtxToLAMAHgr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=27 "Built target MtxToLAMAHgr"
 .PHONY : tools/CMakeFiles/MtxToLAMAHgr.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/MtxToLAMAHgr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/MtxToLAMAHgr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/MtxToLAMAHgr.dir/rule
@@ -1503,12 +1532,12 @@ tools/CMakeFiles/MtxToLAMAHgr.dir/clean:
 tools/CMakeFiles/ComputeNeighborHoodSizes.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/ComputeNeighborHoodSizes.dir/build.make tools/CMakeFiles/ComputeNeighborHoodSizes.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/ComputeNeighborHoodSizes.dir/build.make tools/CMakeFiles/ComputeNeighborHoodSizes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=4,5 "Built target ComputeNeighborHoodSizes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=4 "Built target ComputeNeighborHoodSizes"
 .PHONY : tools/CMakeFiles/ComputeNeighborHoodSizes.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/ComputeNeighborHoodSizes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/ComputeNeighborHoodSizes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/ComputeNeighborHoodSizes.dir/rule
@@ -1584,7 +1613,7 @@ tools/CMakeFiles/CnfToHgr.dir/clean:
 tools/CMakeFiles/HypergraphAnalyzer.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HypergraphAnalyzer.dir/build.make tools/CMakeFiles/HypergraphAnalyzer.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HypergraphAnalyzer.dir/build.make tools/CMakeFiles/HypergraphAnalyzer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=20 "Built target HypergraphAnalyzer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=21 "Built target HypergraphAnalyzer"
 .PHONY : tools/CMakeFiles/HypergraphAnalyzer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1616,7 +1645,7 @@ lib/CMakeFiles/install.library.dir/all: lib/CMakeFiles/kahypar.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/install.library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/install.library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/install.library.dir/rule
@@ -1665,12 +1694,12 @@ lib/CMakeFiles/uninstall-kahypar.dir/clean:
 lib/CMakeFiles/kahypar.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/kahypar.dir/build.make lib/CMakeFiles/kahypar.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/kahypar.dir/build.make lib/CMakeFiles/kahypar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=68,69 "Built target kahypar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=69 "Built target kahypar"
 .PHONY : lib/CMakeFiles/kahypar.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/kahypar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/kahypar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/kahypar.dir/rule
@@ -1693,12 +1722,12 @@ tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/all: external_t
 tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/build.make tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/build.make tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=39 "Built target evo_partitioner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=40 "Built target evo_partitioner_test"
 .PHONY : tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/evolutionary/CMakeFiles/evo_partitioner_test.dir/rule
@@ -1726,7 +1755,7 @@ tests/partition/evolutionary/CMakeFiles/mutation_test.dir/all: external_tools/go
 
 # Build rule for subdir invocation for target.
 tests/partition/evolutionary/CMakeFiles/mutation_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/evolutionary/CMakeFiles/mutation_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/evolutionary/CMakeFiles/mutation_test.dir/rule
@@ -1749,7 +1778,7 @@ tests/partition/evolutionary/CMakeFiles/population_test.dir/all: external_tools/
 tests/partition/evolutionary/CMakeFiles/population_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/population_test.dir/build.make tests/partition/evolutionary/CMakeFiles/population_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/population_test.dir/build.make tests/partition/evolutionary/CMakeFiles/population_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=84 "Built target population_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=84,85 "Built target population_test"
 .PHONY : tests/partition/evolutionary/CMakeFiles/population_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1777,12 +1806,12 @@ tests/partition/evolutionary/CMakeFiles/combine_test.dir/all: external_tools/goo
 tests/partition/evolutionary/CMakeFiles/combine_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/combine_test.dir/build.make tests/partition/evolutionary/CMakeFiles/combine_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/combine_test.dir/build.make tests/partition/evolutionary/CMakeFiles/combine_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=36,37 "Built target combine_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=37 "Built target combine_test"
 .PHONY : tests/partition/evolutionary/CMakeFiles/combine_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/evolutionary/CMakeFiles/combine_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/evolutionary/CMakeFiles/combine_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/evolutionary/CMakeFiles/combine_test.dir/rule
@@ -1805,7 +1834,7 @@ tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/all: external_to
 tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/build.make tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/build.make tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=38 "Built target edge_frequency_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=38,39 "Built target edge_frequency_test"
 .PHONY : tests/partition/evolutionary/CMakeFiles/edge_frequency_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1833,12 +1862,12 @@ tests/partition/evolutionary/CMakeFiles/individual_test.dir/all: external_tools/
 tests/partition/evolutionary/CMakeFiles/individual_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/individual_test.dir/build.make tests/partition/evolutionary/CMakeFiles/individual_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/evolutionary/CMakeFiles/individual_test.dir/build.make tests/partition/evolutionary/CMakeFiles/individual_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=62 "Built target individual_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=63 "Built target individual_test"
 .PHONY : tests/partition/evolutionary/CMakeFiles/individual_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/evolutionary/CMakeFiles/individual_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/evolutionary/CMakeFiles/individual_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/evolutionary/CMakeFiles/individual_test.dir/rule
@@ -1866,7 +1895,7 @@ tests/partition/evolutionary/CMakeFiles/probability_table_test.dir/all: external
 
 # Build rule for subdir invocation for target.
 tests/partition/evolutionary/CMakeFiles/probability_table_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/evolutionary/CMakeFiles/probability_table_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/evolutionary/CMakeFiles/probability_table_test.dir/rule
@@ -1894,7 +1923,7 @@ tests/meta/CMakeFiles/static_multi_dispatch_factory_test.dir/all: external_tools
 
 # Build rule for subdir invocation for target.
 tests/meta/CMakeFiles/static_multi_dispatch_factory_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/meta/CMakeFiles/static_multi_dispatch_factory_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/meta/CMakeFiles/static_multi_dispatch_factory_test.dir/rule
@@ -1923,7 +1952,7 @@ tests/end_to_end/CMakeFiles/integration_tests.dir/all: lib/CMakeFiles/kahypar.di
 
 # Build rule for subdir invocation for target.
 tests/end_to_end/CMakeFiles/integration_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/end_to_end/CMakeFiles/integration_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/end_to_end/CMakeFiles/integration_tests.dir/rule
@@ -1946,12 +1975,12 @@ tests/regression/CMakeFiles/regression_tests.dir/all: external_tools/googletest/
 tests/regression/CMakeFiles/regression_tests.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/regression/CMakeFiles/regression_tests.dir/build.make tests/regression/CMakeFiles/regression_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/regression/CMakeFiles/regression_tests.dir/build.make tests/regression/CMakeFiles/regression_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=90,91 "Built target regression_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=91 "Built target regression_tests"
 .PHONY : tests/regression/CMakeFiles/regression_tests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/regression/CMakeFiles/regression_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/regression/CMakeFiles/regression_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/regression/CMakeFiles/regression_tests.dir/rule
@@ -1974,7 +2003,7 @@ tests/datastructure/CMakeFiles/sparse_set_test.dir/all: external_tools/googletes
 tests/datastructure/CMakeFiles/sparse_set_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/sparse_set_test.dir/build.make tests/datastructure/CMakeFiles/sparse_set_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/sparse_set_test.dir/build.make tests/datastructure/CMakeFiles/sparse_set_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=94 "Built target sparse_set_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=94,95 "Built target sparse_set_test"
 .PHONY : tests/datastructure/CMakeFiles/sparse_set_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2002,7 +2031,7 @@ tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/all: external_tools/
 tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/build.make tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/build.make tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=71 "Built target kway_priority_queue_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=71,72 "Built target kway_priority_queue_test"
 .PHONY : tests/datastructure/CMakeFiles/kway_priority_queue_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2030,7 +2059,7 @@ tests/datastructure/CMakeFiles/binary_heap_test.dir/all: external_tools/googlete
 tests/datastructure/CMakeFiles/binary_heap_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/binary_heap_test.dir/build.make tests/datastructure/CMakeFiles/binary_heap_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/binary_heap_test.dir/build.make tests/datastructure/CMakeFiles/binary_heap_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=33 "Built target binary_heap_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=33,34 "Built target binary_heap_test"
 .PHONY : tests/datastructure/CMakeFiles/binary_heap_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2058,12 +2087,12 @@ tests/datastructure/CMakeFiles/graph_test.dir/all: external_tools/googletest/goo
 tests/datastructure/CMakeFiles/graph_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/graph_test.dir/build.make tests/datastructure/CMakeFiles/graph_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/graph_test.dir/build.make tests/datastructure/CMakeFiles/graph_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=48,49 "Built target graph_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=49 "Built target graph_test"
 .PHONY : tests/datastructure/CMakeFiles/graph_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/datastructure/CMakeFiles/graph_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/datastructure/CMakeFiles/graph_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/datastructure/CMakeFiles/graph_test.dir/rule
@@ -2091,7 +2120,7 @@ tests/datastructure/CMakeFiles/sparse_map_test.dir/all: external_tools/googletes
 
 # Build rule for subdir invocation for target.
 tests/datastructure/CMakeFiles/sparse_map_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/datastructure/CMakeFiles/sparse_map_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/datastructure/CMakeFiles/sparse_map_test.dir/rule
@@ -2114,12 +2143,12 @@ tests/datastructure/CMakeFiles/priority_queue_test.dir/all: external_tools/googl
 tests/datastructure/CMakeFiles/priority_queue_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/priority_queue_test.dir/build.make tests/datastructure/CMakeFiles/priority_queue_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/priority_queue_test.dir/build.make tests/datastructure/CMakeFiles/priority_queue_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=85,86 "Built target priority_queue_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=86 "Built target priority_queue_test"
 .PHONY : tests/datastructure/CMakeFiles/priority_queue_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/datastructure/CMakeFiles/priority_queue_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/datastructure/CMakeFiles/priority_queue_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/datastructure/CMakeFiles/priority_queue_test.dir/rule
@@ -2142,7 +2171,7 @@ tests/datastructure/CMakeFiles/hypergraph_test.dir/all: external_tools/googletes
 tests/datastructure/CMakeFiles/hypergraph_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/hypergraph_test.dir/build.make tests/datastructure/CMakeFiles/hypergraph_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/datastructure/CMakeFiles/hypergraph_test.dir/build.make tests/datastructure/CMakeFiles/hypergraph_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=61 "Built target hypergraph_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=61,62 "Built target hypergraph_test"
 .PHONY : tests/datastructure/CMakeFiles/hypergraph_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2175,7 +2204,7 @@ tests/io/CMakeFiles/hypergraph_io_test.dir/all: external_tools/googletest/google
 
 # Build rule for subdir invocation for target.
 tests/io/CMakeFiles/hypergraph_io_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/io/CMakeFiles/hypergraph_io_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/io/CMakeFiles/hypergraph_io_test.dir/rule
@@ -2199,12 +2228,12 @@ tests/interface/CMakeFiles/interface_test.dir/all: external_tools/googletest/goo
 tests/interface/CMakeFiles/interface_test.dir/all: lib/CMakeFiles/kahypar.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/interface/CMakeFiles/interface_test.dir/build.make tests/interface/CMakeFiles/interface_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/interface/CMakeFiles/interface_test.dir/build.make tests/interface/CMakeFiles/interface_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=66 "Built target interface_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=66,67 "Built target interface_test"
 .PHONY : tests/interface/CMakeFiles/interface_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/interface/CMakeFiles/interface_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/interface/CMakeFiles/interface_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/interface/CMakeFiles/interface_test.dir/rule
@@ -2227,12 +2256,12 @@ tests/utils/CMakeFiles/math_test.dir/all: external_tools/googletest/googlemock/g
 tests/utils/CMakeFiles/math_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/utils/CMakeFiles/math_test.dir/build.make tests/utils/CMakeFiles/math_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/utils/CMakeFiles/math_test.dir/build.make tests/utils/CMakeFiles/math_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=77 "Built target math_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=78 "Built target math_test"
 .PHONY : tests/utils/CMakeFiles/math_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/utils/CMakeFiles/math_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/utils/CMakeFiles/math_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/utils/CMakeFiles/math_test.dir/rule
@@ -2260,7 +2289,7 @@ tests/partition/CMakeFiles/partitioner_test.dir/all: external_tools/googletest/g
 
 # Build rule for subdir invocation for target.
 tests/partition/CMakeFiles/partitioner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/CMakeFiles/partitioner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/CMakeFiles/partitioner_test.dir/rule
@@ -2283,12 +2312,12 @@ tests/partition/CMakeFiles/metrics_test.dir/all: external_tools/googletest/googl
 tests/partition/CMakeFiles/metrics_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/CMakeFiles/metrics_test.dir/build.make tests/partition/CMakeFiles/metrics_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/CMakeFiles/metrics_test.dir/build.make tests/partition/CMakeFiles/metrics_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=78,79 "Built target metrics_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=79 "Built target metrics_test"
 .PHONY : tests/partition/CMakeFiles/metrics_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/CMakeFiles/metrics_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/CMakeFiles/metrics_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/CMakeFiles/metrics_test.dir/rule
@@ -2311,12 +2340,12 @@ tests/partition/CMakeFiles/fixed_vertex_test.dir/all: external_tools/googletest/
 tests/partition/CMakeFiles/fixed_vertex_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/CMakeFiles/fixed_vertex_test.dir/build.make tests/partition/CMakeFiles/fixed_vertex_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/CMakeFiles/fixed_vertex_test.dir/build.make tests/partition/CMakeFiles/fixed_vertex_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=40 "Built target fixed_vertex_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=41 "Built target fixed_vertex_test"
 .PHONY : tests/partition/CMakeFiles/fixed_vertex_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/CMakeFiles/fixed_vertex_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/CMakeFiles/fixed_vertex_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/CMakeFiles/fixed_vertex_test.dir/rule
@@ -2339,7 +2368,7 @@ tests/partition/preprocessing/CMakeFiles/louvain_test.dir/all: external_tools/go
 tests/partition/preprocessing/CMakeFiles/louvain_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/louvain_test.dir/build.make tests/partition/preprocessing/CMakeFiles/louvain_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/louvain_test.dir/build.make tests/partition/preprocessing/CMakeFiles/louvain_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=76 "Built target louvain_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=76,77 "Built target louvain_test"
 .PHONY : tests/partition/preprocessing/CMakeFiles/louvain_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2367,12 +2396,12 @@ tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/all: e
 tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/build.make tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/build.make tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=58,59 "Built target hypergraph_deduplicator_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=59 "Built target hypergraph_deduplicator_test"
 .PHONY : tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/preprocessing/CMakeFiles/hypergraph_deduplicator_test.dir/rule
@@ -2395,12 +2424,12 @@ tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/all: external_tools
 tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/build.make tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/build.make tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=95,96 "Built target sparsifier_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=96 "Built target sparsifier_test"
 .PHONY : tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/preprocessing/CMakeFiles/sparsifier_test.dir/rule
@@ -2428,7 +2457,7 @@ tests/partition/coarsening/CMakeFiles/vertex_pair_rater_test.dir/all: external_t
 
 # Build rule for subdir invocation for target.
 tests/partition/coarsening/CMakeFiles/vertex_pair_rater_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/coarsening/CMakeFiles/vertex_pair_rater_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/coarsening/CMakeFiles/vertex_pair_rater_test.dir/rule
@@ -2456,7 +2485,7 @@ tests/partition/coarsening/CMakeFiles/lazy_vertex_pair_coarsener_test.dir/all: e
 
 # Build rule for subdir invocation for target.
 tests/partition/coarsening/CMakeFiles/lazy_vertex_pair_coarsener_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/coarsening/CMakeFiles/lazy_vertex_pair_coarsener_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/coarsening/CMakeFiles/lazy_vertex_pair_coarsener_test.dir/rule
@@ -2479,12 +2508,12 @@ tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/all: e
 tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/build.make tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/build.make tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=41,42 "Built target full_vertex_pair_coarsener_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=42 "Built target full_vertex_pair_coarsener_test"
 .PHONY : tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/coarsening/CMakeFiles/full_vertex_pair_coarsener_test.dir/rule
@@ -2507,7 +2536,7 @@ tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/all:
 tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=89 "Built target random_partitioner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=89,90 "Built target random_partitioner_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/random_partitioner_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2535,12 +2564,12 @@ tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_te
 tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=73,74 "Built target label_propagation_partitioner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=74 "Built target label_propagation_partitioner_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/label_propagation_partitioner_test.dir/rule
@@ -2563,7 +2592,7 @@ tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partit
 tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=51 "Built target greedy_hypergraph_growing_partitioner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=51,52 "Built target greedy_hypergraph_growing_partitioner_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_partitioner_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2596,7 +2625,7 @@ tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_functi
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_functionality_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_functionality_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/greedy_hypergraph_growing_functionality_test.dir/rule
@@ -2619,12 +2648,12 @@ tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.di
 tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=63,64 "Built target initial_partitioner_base_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=64 "Built target initial_partitioner_base_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/initial_partitioner_base_test.dir/rule
@@ -2647,7 +2676,7 @@ tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/all: e
 tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=43 "Built target gain_computation_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=43,44 "Built target gain_computation_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/gain_computation_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2675,12 +2704,12 @@ tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/
 tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=52 "Built target greedy_queue_selection_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=53 "Built target greedy_queue_selection_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/greedy_queue_selection_test.dir/rule
@@ -2703,12 +2732,12 @@ tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_
 tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=72 "Built target label_propagation_functionality_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=73 "Built target label_propagation_functionality_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/label_propagation_functionality_test.dir/rule
@@ -2731,12 +2760,12 @@ tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/all: ex
 tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/build.make tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=31,32 "Built target bfs_partitioner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=32 "Built target bfs_partitioner_test"
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/initial_partitioning/CMakeFiles/bfs_partitioner_test.dir/rule
@@ -2764,7 +2793,7 @@ tests/partition/refinement/CMakeFiles/quotient_graph_block_scheduler_test.dir/al
 
 # Build rule for subdir invocation for target.
 tests/partition/refinement/CMakeFiles/quotient_graph_block_scheduler_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/refinement/CMakeFiles/quotient_graph_block_scheduler_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/refinement/CMakeFiles/quotient_graph_block_scheduler_test.dir/rule
@@ -2787,12 +2816,12 @@ tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/all: external_to
 tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/all: external_tools/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/build.make tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/build.make tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=67 "Built target k_way_fm_refiner_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles --progress-num=68 "Built target k_way_fm_refiner_test"
 .PHONY : tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/refinement/CMakeFiles/k_way_fm_refiner_test.dir/rule
@@ -2820,7 +2849,7 @@ tests/partition/refinement/CMakeFiles/two_way_fm_refiner_test.dir/all: external_
 
 # Build rule for subdir invocation for target.
 tests/partition/refinement/CMakeFiles/two_way_fm_refiner_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/partition/refinement/CMakeFiles/two_way_fm_refiner_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles 0
 .PHONY : tests/partition/refinement/CMakeFiles/two_way_fm_refiner_test.dir/rule

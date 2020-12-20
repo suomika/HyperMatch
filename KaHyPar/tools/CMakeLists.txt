@@ -65,6 +65,9 @@ set_property(TARGET CalculateRelaxedEpsilon PROPERTY CXX_STANDARD_REQUIRED ON)
 add_executable(RemoveHeavyNodes remove_heavy_nodes.cc)
 set_property(TARGET RemoveHeavyNodes PROPERTY CXX_STANDARD 17)
 set_property(TARGET RemoveHeavyNodes PROPERTY CXX_STANDARD_REQUIRED ON)
+add_executable(HgrToGraph hgr_to_graph_converter.cc)
+set_property(TARGET HgrToGraph PROPERTY CXX_STANDARD 17)
+set_property(TARGET HgrToGraph PROPERTY CXX_STANDARD_REQUIRED ON)
 
 
 
