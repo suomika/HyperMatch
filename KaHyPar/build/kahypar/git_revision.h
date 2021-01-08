@@ -20,4 +20,4 @@
 
 #pragma once
 
-#define KaHyPar_BUILD_VERSION a4859dea9b44e12cca9303fecfe2dd14528146a9
+#define KaHyPar_BUILD_VERSION 78ac6f9ef773cd8b8a2928a1cf86607779237c25
