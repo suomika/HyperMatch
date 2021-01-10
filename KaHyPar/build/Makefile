@@ -317,6 +317,19 @@ cnf_to_hgr_converter_test/fast:
 .PHONY : cnf_to_hgr_converter_test/fast
 
 #=============================================================================
+# Target rules for targets named UcarToHgr3dim
+
+# Build rule for target.
+UcarToHgr3dim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UcarToHgr3dim
+.PHONY : UcarToHgr3dim
+
+# fast build rule for target.
+UcarToHgr3dim/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr3dim.dir/build.make tools/CMakeFiles/UcarToHgr3dim.dir/build
+.PHONY : UcarToHgr3dim/fast
+
+#=============================================================================
 # Target rules for targets named mtx_to_hgr_converter_test
 
 # Build rule for target.
@@ -1279,6 +1292,7 @@ help:
 	@echo "... MtxToLAMAHgr"
 	@echo "... RemoveHeavyNodes"
 	@echo "... RepeatsToHgr"
+	@echo "... UcarToHgr3dim"
 	@echo "... VerifyPartition"
 	@echo "... bfs_partitioner_test"
 	@echo "... binary_heap_test"

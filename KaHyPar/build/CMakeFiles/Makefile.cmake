@@ -151,6 +151,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tools/CMakeFiles/repeats_to_hgr_conversion_test.dir/DependInfo.cmake"
   "tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/DependInfo.cmake"
   "tools/CMakeFiles/cnf_to_hgr_converter_test.dir/DependInfo.cmake"
+  "tools/CMakeFiles/UcarToHgr3dim.dir/DependInfo.cmake"
   "tools/CMakeFiles/mtx_to_hgr_converter_test.dir/DependInfo.cmake"
   "tools/CMakeFiles/CalculateRelaxedEpsilon.dir/DependInfo.cmake"
   "tools/CMakeFiles/GraphToHgr.dir/DependInfo.cmake"

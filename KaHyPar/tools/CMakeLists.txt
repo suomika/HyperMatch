@@ -68,6 +68,9 @@ set_property(TARGET RemoveHeavyNodes PROPERTY CXX_STANDARD_REQUIRED ON)
 add_executable(HgrToGraph hgr_to_graph_converter.cc)
 set_property(TARGET HgrToGraph PROPERTY CXX_STANDARD 17)
 set_property(TARGET HgrToGraph PROPERTY CXX_STANDARD_REQUIRED ON)
+add_executable(UcarToHgr3dim ucar_to_hgr_converter_3dim.cc)
+set_property(TARGET UcarToHgr3dim PROPERTY CXX_STANDARD 17)
+set_property(TARGET UcarToHgr3dim PROPERTY CXX_STANDARD_REQUIRED ON)
 
 
 

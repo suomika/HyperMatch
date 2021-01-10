@@ -1,0 +1,4 @@
+reduction_time 0.182425
+time 0.207811
+MIS_weight 2529
+MIS_weight_check 2529
