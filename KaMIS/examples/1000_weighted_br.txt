@@ -1,0 +1,6 @@
+reduction_time 2.65781
+978 [2.90689]
+%timeout
+time 1000.02
+MIS_weight 978
+MIS_weight_check 978
