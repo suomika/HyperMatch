@@ -26,20 +26,13 @@ int main(int argc, char* argv[]) {
     // because tns files have no information about the number of
     // hyperedges and nodes per partition, we have to count (find) them first
     int num_hyperedges = 0;
-    int npp = 0;
-    // int num_partitions;
+    int n1 = 0;
+    int n2 = 0;
+    int n3 = 0;
     
     std::string line;
     while (std::getline(input_file, line))
         ++num_hyperedges;
-    input_file.clear();
-    input_file.seekg(0);
-    
-    double Val;
-    while(input_file >> Val) {
-        if (Val > npp)
-            npp = Val;
-    }
     input_file.clear();
     input_file.seekg(0);
     
@@ -50,18 +43,31 @@ int main(int argc, char* argv[]) {
     int col3;
     double weights;
     
+    while(input_file >> col1 >> col2 >> col3 >> weights) {
+        if (col1 > n1)
+            n1 = col1;
+        if (col2 > n2)
+            n2 = col2;
+        if (col3 > n3)
+            n3 = col3;
+    }
+    input_file.clear();
+    input_file.seekg(0);
+    
+    int num_nodes = n1 + n2 + n3;
+    
     // beacuse tns files are always weighted, it's possible to create
     // a weightes hypergraph or an unweighted
     int o = atoi(argv[2]);
     if (o == 0) {
-        output_file << num_hyperedges << " " << 3 * npp << std::endl;
-        while (input_file >> col1 >> col2 >> col3) {
-            output_file << col1 << " " << col2 + npp << " " << col3 + 2*npp << std::endl;
+        output_file << num_hyperedges << " " << num_nodes << std::endl;
+        while (input_file >> col1 >> col2 >> col3 >> weights) {
+            output_file << col1 << " " << col2 + n1 << " " << col3 + n1 + n2 << std::endl;
         }
     } else if (o == 1) {
-        output_file << num_hyperedges << " " << 3 * npp << " 1" << std::endl;
+        output_file << num_hyperedges << " " << num_nodes << " 1" << std::endl;
         while (input_file >> col1 >> col2 >> col3 >> weights) {
-            output_file << weights << " " << col1 << " " << col2 + npp << " " << col3 + 2*npp << std::endl;
+            output_file << weights << " " << col1 << " " << col2 + n1 << " " << col3 + n1 + n2 << std::endl;
         }
     } else {
         std::cerr << "\n*************************************************\n"<< "Please specify if you want a weighted Hypergraph or not:\n - set argv[2] = 0 for unweighted \n - set argv[2] = 1 for weighted." << "\n*************************************************\n" << std::endl;

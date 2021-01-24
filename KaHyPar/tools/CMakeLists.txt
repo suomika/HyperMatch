@@ -71,7 +71,15 @@ set_property(TARGET HgrToGraph PROPERTY CXX_STANDARD_REQUIRED ON)
 add_executable(UcarToHgr3dim ucar_to_hgr_converter_3dim.cc)
 set_property(TARGET UcarToHgr3dim PROPERTY CXX_STANDARD 17)
 set_property(TARGET UcarToHgr3dim PROPERTY CXX_STANDARD_REQUIRED ON)
-
+add_executable(UcarToHgr9dim ucar_to_hgr_converter_9dim.cc)
+set_property(TARGET UcarToHgr9dim PROPERTY CXX_STANDARD 17)
+set_property(TARGET UcarToHgr9dim PROPERTY CXX_STANDARD_REQUIRED ON)
+add_executable(TnsToUcar3dim tns_to_ucar_converter_3dim.cc)
+set_property(TARGET TnsToUcar3dim PROPERTY CXX_STANDARD 17)
+set_property(TARGET TnsToUcar3dim PROPERTY CXX_STANDARD_REQUIRED ON)
+add_executable(TnsToHgr3dim tns_to_hgr_converter_3dim.cc)
+set_property(TARGET TnsToHgr3dim PROPERTY CXX_STANDARD 17)
+set_property(TARGET TnsToHgr3dim PROPERTY CXX_STANDARD_REQUIRED ON)
 
 
 # This test needs test instance files, so we copy them to the corresponding build dir

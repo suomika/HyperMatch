@@ -291,6 +291,19 @@ repeats_to_hgr_conversion_test/fast:
 .PHONY : repeats_to_hgr_conversion_test/fast
 
 #=============================================================================
+# Target rules for targets named cnf_to_hgr_converter_test
+
+# Build rule for target.
+cnf_to_hgr_converter_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cnf_to_hgr_converter_test
+.PHONY : cnf_to_hgr_converter_test
+
+# fast build rule for target.
+cnf_to_hgr_converter_test/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
+.PHONY : cnf_to_hgr_converter_test/fast
+
+#=============================================================================
 # Target rules for targets named hgr_to_edge_list_conversion_test
 
 # Build rule for target.
@@ -304,17 +317,17 @@ hgr_to_edge_list_conversion_test/fast:
 .PHONY : hgr_to_edge_list_conversion_test/fast
 
 #=============================================================================
-# Target rules for targets named cnf_to_hgr_converter_test
+# Target rules for targets named UcarToHgr9dim
 
 # Build rule for target.
-cnf_to_hgr_converter_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cnf_to_hgr_converter_test
-.PHONY : cnf_to_hgr_converter_test
+UcarToHgr9dim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UcarToHgr9dim
+.PHONY : UcarToHgr9dim
 
 # fast build rule for target.
-cnf_to_hgr_converter_test/fast:
-	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
-.PHONY : cnf_to_hgr_converter_test/fast
+UcarToHgr9dim/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr9dim.dir/build.make tools/CMakeFiles/UcarToHgr9dim.dir/build
+.PHONY : UcarToHgr9dim/fast
 
 #=============================================================================
 # Target rules for targets named UcarToHgr3dim
@@ -419,6 +432,19 @@ HgrToMtx: cmake_check_build_system
 HgrToMtx/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
 .PHONY : HgrToMtx/fast
+
+#=============================================================================
+# Target rules for targets named TnsToHgr3dim
+
+# Build rule for target.
+TnsToHgr3dim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TnsToHgr3dim
+.PHONY : TnsToHgr3dim
+
+# fast build rule for target.
+TnsToHgr3dim/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToHgr3dim.dir/build.make tools/CMakeFiles/TnsToHgr3dim.dir/build
+.PHONY : TnsToHgr3dim/fast
 
 #=============================================================================
 # Target rules for targets named RepeatsToHgr
@@ -614,6 +640,19 @@ MtxToLAMAHgr: cmake_check_build_system
 MtxToLAMAHgr/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToLAMAHgr.dir/build.make tools/CMakeFiles/MtxToLAMAHgr.dir/build
 .PHONY : MtxToLAMAHgr/fast
+
+#=============================================================================
+# Target rules for targets named TnsToUcar3dim
+
+# Build rule for target.
+TnsToUcar3dim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TnsToUcar3dim
+.PHONY : TnsToUcar3dim
+
+# fast build rule for target.
+TnsToUcar3dim/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToUcar3dim.dir/build.make tools/CMakeFiles/TnsToUcar3dim.dir/build
+.PHONY : TnsToUcar3dim/fast
 
 #=============================================================================
 # Target rules for targets named ComputeNeighborHoodSizes
@@ -1292,7 +1331,10 @@ help:
 	@echo "... MtxToLAMAHgr"
 	@echo "... RemoveHeavyNodes"
 	@echo "... RepeatsToHgr"
+	@echo "... TnsToHgr3dim"
+	@echo "... TnsToUcar3dim"
 	@echo "... UcarToHgr3dim"
+	@echo "... UcarToHgr9dim"
 	@echo "... VerifyPartition"
 	@echo "... bfs_partitioner_test"
 	@echo "... binary_heap_test"

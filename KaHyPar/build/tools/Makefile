@@ -202,6 +202,21 @@ repeats_to_hgr_conversion_test/fast:
 .PHONY : repeats_to_hgr_conversion_test/fast
 
 # Convenience name for target.
+tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
+.PHONY : tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
+
+# Convenience name for target.
+cnf_to_hgr_converter_test: tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
+
+.PHONY : cnf_to_hgr_converter_test
+
+# fast build rule for target.
+cnf_to_hgr_converter_test/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
+.PHONY : cnf_to_hgr_converter_test/fast
+
+# Convenience name for target.
 tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/rule:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/rule
 .PHONY : tools/CMakeFiles/hgr_to_edge_list_conversion_test.dir/rule
@@ -217,19 +232,19 @@ hgr_to_edge_list_conversion_test/fast:
 .PHONY : hgr_to_edge_list_conversion_test/fast
 
 # Convenience name for target.
-tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
-.PHONY : tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
+tools/CMakeFiles/UcarToHgr9dim.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/UcarToHgr9dim.dir/rule
+.PHONY : tools/CMakeFiles/UcarToHgr9dim.dir/rule
 
 # Convenience name for target.
-cnf_to_hgr_converter_test: tools/CMakeFiles/cnf_to_hgr_converter_test.dir/rule
+UcarToHgr9dim: tools/CMakeFiles/UcarToHgr9dim.dir/rule
 
-.PHONY : cnf_to_hgr_converter_test
+.PHONY : UcarToHgr9dim
 
 # fast build rule for target.
-cnf_to_hgr_converter_test/fast:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build.make tools/CMakeFiles/cnf_to_hgr_converter_test.dir/build
-.PHONY : cnf_to_hgr_converter_test/fast
+UcarToHgr9dim/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr9dim.dir/build.make tools/CMakeFiles/UcarToHgr9dim.dir/build
+.PHONY : UcarToHgr9dim/fast
 
 # Convenience name for target.
 tools/CMakeFiles/UcarToHgr3dim.dir/rule:
@@ -350,6 +365,21 @@ HgrToMtx: tools/CMakeFiles/HgrToMtx.dir/rule
 HgrToMtx/fast:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/HgrToMtx.dir/build.make tools/CMakeFiles/HgrToMtx.dir/build
 .PHONY : HgrToMtx/fast
+
+# Convenience name for target.
+tools/CMakeFiles/TnsToHgr3dim.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/TnsToHgr3dim.dir/rule
+.PHONY : tools/CMakeFiles/TnsToHgr3dim.dir/rule
+
+# Convenience name for target.
+TnsToHgr3dim: tools/CMakeFiles/TnsToHgr3dim.dir/rule
+
+.PHONY : TnsToHgr3dim
+
+# fast build rule for target.
+TnsToHgr3dim/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToHgr3dim.dir/build.make tools/CMakeFiles/TnsToHgr3dim.dir/build
+.PHONY : TnsToHgr3dim/fast
 
 # Convenience name for target.
 tools/CMakeFiles/RepeatsToHgr.dir/rule:
@@ -575,6 +605,21 @@ MtxToLAMAHgr: tools/CMakeFiles/MtxToLAMAHgr.dir/rule
 MtxToLAMAHgr/fast:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/MtxToLAMAHgr.dir/build.make tools/CMakeFiles/MtxToLAMAHgr.dir/build
 .PHONY : MtxToLAMAHgr/fast
+
+# Convenience name for target.
+tools/CMakeFiles/TnsToUcar3dim.dir/rule:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/TnsToUcar3dim.dir/rule
+.PHONY : tools/CMakeFiles/TnsToUcar3dim.dir/rule
+
+# Convenience name for target.
+TnsToUcar3dim: tools/CMakeFiles/TnsToUcar3dim.dir/rule
+
+.PHONY : TnsToUcar3dim
+
+# fast build rule for target.
+TnsToUcar3dim/fast:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToUcar3dim.dir/build.make tools/CMakeFiles/TnsToUcar3dim.dir/build
+.PHONY : TnsToUcar3dim/fast
 
 # Convenience name for target.
 tools/CMakeFiles/ComputeNeighborHoodSizes.dir/rule:
@@ -1428,6 +1473,60 @@ repeats_to_hgr_converter.cc.s:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/RepeatsToHgr.dir/build.make tools/CMakeFiles/RepeatsToHgr.dir/repeats_to_hgr_converter.cc.s
 .PHONY : repeats_to_hgr_converter.cc.s
 
+tns_to_hgr_converter_3dim.o: tns_to_hgr_converter_3dim.cc.o
+
+.PHONY : tns_to_hgr_converter_3dim.o
+
+# target to build an object file
+tns_to_hgr_converter_3dim.cc.o:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToHgr3dim.dir/build.make tools/CMakeFiles/TnsToHgr3dim.dir/tns_to_hgr_converter_3dim.cc.o
+.PHONY : tns_to_hgr_converter_3dim.cc.o
+
+tns_to_hgr_converter_3dim.i: tns_to_hgr_converter_3dim.cc.i
+
+.PHONY : tns_to_hgr_converter_3dim.i
+
+# target to preprocess a source file
+tns_to_hgr_converter_3dim.cc.i:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToHgr3dim.dir/build.make tools/CMakeFiles/TnsToHgr3dim.dir/tns_to_hgr_converter_3dim.cc.i
+.PHONY : tns_to_hgr_converter_3dim.cc.i
+
+tns_to_hgr_converter_3dim.s: tns_to_hgr_converter_3dim.cc.s
+
+.PHONY : tns_to_hgr_converter_3dim.s
+
+# target to generate assembly for a file
+tns_to_hgr_converter_3dim.cc.s:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToHgr3dim.dir/build.make tools/CMakeFiles/TnsToHgr3dim.dir/tns_to_hgr_converter_3dim.cc.s
+.PHONY : tns_to_hgr_converter_3dim.cc.s
+
+tns_to_ucar_converter_3dim.o: tns_to_ucar_converter_3dim.cc.o
+
+.PHONY : tns_to_ucar_converter_3dim.o
+
+# target to build an object file
+tns_to_ucar_converter_3dim.cc.o:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToUcar3dim.dir/build.make tools/CMakeFiles/TnsToUcar3dim.dir/tns_to_ucar_converter_3dim.cc.o
+.PHONY : tns_to_ucar_converter_3dim.cc.o
+
+tns_to_ucar_converter_3dim.i: tns_to_ucar_converter_3dim.cc.i
+
+.PHONY : tns_to_ucar_converter_3dim.i
+
+# target to preprocess a source file
+tns_to_ucar_converter_3dim.cc.i:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToUcar3dim.dir/build.make tools/CMakeFiles/TnsToUcar3dim.dir/tns_to_ucar_converter_3dim.cc.i
+.PHONY : tns_to_ucar_converter_3dim.cc.i
+
+tns_to_ucar_converter_3dim.s: tns_to_ucar_converter_3dim.cc.s
+
+.PHONY : tns_to_ucar_converter_3dim.s
+
+# target to generate assembly for a file
+tns_to_ucar_converter_3dim.cc.s:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/TnsToUcar3dim.dir/build.make tools/CMakeFiles/TnsToUcar3dim.dir/tns_to_ucar_converter_3dim.cc.s
+.PHONY : tns_to_ucar_converter_3dim.cc.s
+
 ucar_to_hgr_converter_3dim.o: ucar_to_hgr_converter_3dim.cc.o
 
 .PHONY : ucar_to_hgr_converter_3dim.o
@@ -1454,6 +1553,33 @@ ucar_to_hgr_converter_3dim.s: ucar_to_hgr_converter_3dim.cc.s
 ucar_to_hgr_converter_3dim.cc.s:
 	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr3dim.dir/build.make tools/CMakeFiles/UcarToHgr3dim.dir/ucar_to_hgr_converter_3dim.cc.s
 .PHONY : ucar_to_hgr_converter_3dim.cc.s
+
+ucar_to_hgr_converter_9dim.o: ucar_to_hgr_converter_9dim.cc.o
+
+.PHONY : ucar_to_hgr_converter_9dim.o
+
+# target to build an object file
+ucar_to_hgr_converter_9dim.cc.o:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr9dim.dir/build.make tools/CMakeFiles/UcarToHgr9dim.dir/ucar_to_hgr_converter_9dim.cc.o
+.PHONY : ucar_to_hgr_converter_9dim.cc.o
+
+ucar_to_hgr_converter_9dim.i: ucar_to_hgr_converter_9dim.cc.i
+
+.PHONY : ucar_to_hgr_converter_9dim.i
+
+# target to preprocess a source file
+ucar_to_hgr_converter_9dim.cc.i:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr9dim.dir/build.make tools/CMakeFiles/UcarToHgr9dim.dir/ucar_to_hgr_converter_9dim.cc.i
+.PHONY : ucar_to_hgr_converter_9dim.cc.i
+
+ucar_to_hgr_converter_9dim.s: ucar_to_hgr_converter_9dim.cc.s
+
+.PHONY : ucar_to_hgr_converter_9dim.s
+
+# target to generate assembly for a file
+ucar_to_hgr_converter_9dim.cc.s:
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/UcarToHgr9dim.dir/build.make tools/CMakeFiles/UcarToHgr9dim.dir/ucar_to_hgr_converter_9dim.cc.s
+.PHONY : ucar_to_hgr_converter_9dim.cc.s
 
 verify_partition.o: verify_partition.cc.o
 
@@ -1517,7 +1643,10 @@ help:
 	@echo "... MtxToLAMAHgr"
 	@echo "... RemoveHeavyNodes"
 	@echo "... RepeatsToHgr"
+	@echo "... TnsToHgr3dim"
+	@echo "... TnsToUcar3dim"
 	@echo "... UcarToHgr3dim"
+	@echo "... UcarToHgr9dim"
 	@echo "... VerifyPartition"
 	@echo "... bookshelf_to_hgr_converter_test"
 	@echo "... cnf_to_hgr_converter_test"
@@ -1612,9 +1741,18 @@ help:
 	@echo "... repeats_to_hgr_converter.o"
 	@echo "... repeats_to_hgr_converter.i"
 	@echo "... repeats_to_hgr_converter.s"
+	@echo "... tns_to_hgr_converter_3dim.o"
+	@echo "... tns_to_hgr_converter_3dim.i"
+	@echo "... tns_to_hgr_converter_3dim.s"
+	@echo "... tns_to_ucar_converter_3dim.o"
+	@echo "... tns_to_ucar_converter_3dim.i"
+	@echo "... tns_to_ucar_converter_3dim.s"
 	@echo "... ucar_to_hgr_converter_3dim.o"
 	@echo "... ucar_to_hgr_converter_3dim.i"
 	@echo "... ucar_to_hgr_converter_3dim.s"
+	@echo "... ucar_to_hgr_converter_9dim.o"
+	@echo "... ucar_to_hgr_converter_9dim.i"
+	@echo "... ucar_to_hgr_converter_9dim.s"
 	@echo "... verify_partition.o"
 	@echo "... verify_partition.i"
 	@echo "... verify_partition.s"

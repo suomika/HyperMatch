@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/tns_to_ucar_converter_3dim.cc
+fstream
+-
+iostream
+-
+
