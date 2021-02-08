@@ -656,16 +656,6 @@ string
 vector
 -
 
-/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/mtx_to_hgr_conversion.cc
-sstream
--
-string
--
-kahypar/macros.h
-/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/kahypar/macros.h
-tools/mtx_to_hgr_conversion.h
-/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/tools/mtx_to_hgr_conversion.h
-
 /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/mtx_to_hgr_converter_test.cc
 gmock/gmock.h
 /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/gmock/gmock.h

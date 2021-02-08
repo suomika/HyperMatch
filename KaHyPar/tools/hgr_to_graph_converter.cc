@@ -32,12 +32,28 @@ int main(int argc, char* argv[]) {
     
     std::list<int> temp = {};
     
+    // decision boundary: From which size on we should remove pins (and how much)
+    int maxDegree = 0;
+    int number = hypergraph.initialNumEdges();
+    if (number > 20000 && number < 1000000) {
+        maxDegree = number / 5;
+    } else if (number >= 1000000) {
+        maxDegree = number / 100;
+    } else {
+        maxDegree = 20000;
+    }
+    
+    // remove 'big pins' from hypergraph
+    for (const HypernodeID& pin : hypergraph.nodes()) {
+        if (hypergraph.nodeDegree(pin) > maxDegree) hypergraph.removeNode(pin);
+    }
+    
     // counting overlapping hyperedges to determine #edges in graph
     int overlapping_edges = 0;
     for (const HyperedgeID& he : hypergraph.edges()) {
         temp.clear();
         for (const HypernodeID& pin : hypergraph.pins(he)) {
-            for (const HypernodeID& he2 : hypergraph.incidentEdges(pin)) {
+            for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                 if (he != he2) {
                     temp.push_back(he2);
                 }
@@ -59,7 +75,7 @@ int main(int argc, char* argv[]) {
         for (const HyperedgeID& he : hypergraph.edges()) {
             temp.clear();
             for (const HypernodeID& pin : hypergraph.pins(he)) {
-                for (const HypernodeID& he2 : hypergraph.incidentEdges(pin)) {
+                for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
                         temp.push_back(he2);
                     }
@@ -79,7 +95,7 @@ int main(int argc, char* argv[]) {
         for (const HyperedgeID& he : hypergraph.edges()) {
             temp.clear();
             for (const HypernodeID& pin : hypergraph.pins(he)) {
-                for (const HypernodeID& he2 : hypergraph.incidentEdges(pin)) {
+                for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
                         temp.push_back(he2);
                     }
@@ -94,10 +110,7 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    
-    
     out_stream.close();
     std::cout << " ... done!" << std::endl;
     return 0;
 }
-
