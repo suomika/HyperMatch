@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build
 include lib/CMakeFiles/install.library.dir/progress.make
 
 lib/CMakeFiles/install.library:
-	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/lib && /usr/local/Cellar/cmake/3.19.1/bin/cmake -DBUILD_TYPE=RELEASE -P /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/cmake_install.cmake
+	cd /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/lib && /usr/local/Cellar/cmake/3.19.1/bin/cmake -DBUILD_TYPE=Debug -P /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/cmake_install.cmake
 
 install.library: lib/CMakeFiles/install.library
 install.library: lib/CMakeFiles/install.library.dir/build.make

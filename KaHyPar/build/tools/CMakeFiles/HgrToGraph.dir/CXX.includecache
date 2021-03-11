@@ -205,10 +205,20 @@ string
 -
 list
 -
+typeinfo
+-
 kahypar/definitions.h
 /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/kahypar/definitions.h
 kahypar/io/hypergraph_io.h
 /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/kahypar/io/hypergraph_io.h
 kahypar/macros.h
 /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/kahypar/macros.h
+omp.h
+-
+
+/usr/local/include/omp.h
+stdlib.h
+-
+stdint.h
+-
 

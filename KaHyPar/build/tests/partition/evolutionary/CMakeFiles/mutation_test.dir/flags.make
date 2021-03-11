@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DKAHYPAR_ENAB
 
 CXX_INCLUDES = -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build -isystem /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest/include -isystem /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest -isystem /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest/../googlemock/include -isystem /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest/../googlemock -isystem /usr/local/include
 
-CXX_FLAGS =  -msse4.2  -std=c++1y -Wno-register -O3 -DNDEBUG -O3 -mtune=native -march=native -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
+CXX_FLAGS =  -Xclang -fopenmp -msse4.2  -std=c++1y -Wno-register -g -pthread -g3 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -std=gnu++17
 

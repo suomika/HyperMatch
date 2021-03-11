@@ -18,4 +18,5 @@ tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o: ../kahypar/partitio
 tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o: ../kahypar/utils/logger.h
 tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o: ../kahypar/utils/math.h
 tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o: ../tools/hgr_to_graph_converter.cc
+tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o: /usr/local/include/omp.h
 

@@ -11,3 +11,16 @@ make: *** [cmTC_5cfef/fast] Error 2
 
 Source file was:
 int main() { return 0; }
+Performing C++ SOURCE FILE Test KAHYPAR_HAS_CRC32 failed with the following output:
+Change Dir: /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e5172/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e5172.dir/build.make CMakeFiles/cmTC_e5172.dir/build
+Building CXX object CMakeFiles/cmTC_e5172.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DKAHYPAR_HAS_CRC32  -Xclang -fopenmp -msse4.2  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -mcrc32 -std=gnu++17 -o CMakeFiles/cmTC_e5172.dir/src.cxx.o -c /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-mcrc32'
+make[2]: *** [CMakeFiles/cmTC_e5172.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_e5172/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

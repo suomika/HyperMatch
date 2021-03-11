@@ -19,3 +19,4 @@ tools/CMakeFiles/HgrToGraph.dir/hgr_to_graph_converter.cc.o
  ../kahypar/utils/logger.h
  ../kahypar/utils/math.h
  /Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/tools/hgr_to_graph_converter.cc
+ /usr/local/include/omp.h

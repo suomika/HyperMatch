@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googlemock/include -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googlemock -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest/include -I/Users/Mika/desktop/5_Semester/FP/HyperMatch/KaHyPar/external_tools/googletest/googletest
 
-CXX_FLAGS = -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -DGTEST_HAS_PTHREAD=1   -std=gnu++17
+CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -DGTEST_HAS_PTHREAD=1   -std=gnu++17
 
