@@ -9,6 +9,7 @@
 #include <sstream>
 #include <string>
 #include <list>
+#include <cassert>
 #include <typeinfo>
 
 #include "kahypar/definitions.h"
@@ -47,16 +48,14 @@ int main(int argc, char* argv[]) {
     }
     
     // remove 'big pins' from hypergraph
-    #pragma omp parallel for
     for (HypernodeID pin = 0; pin < num_nodes; ++pin) {
         if (hypergraph.nodeDegree(pin) > maxDegree) hypergraph.removeNode(pin);
     }
-    
     std::cout << " ... reduced nodes successfully!" << std::endl;
     
     // counting overlapping hyperedges to determine #edges in graph
     int overlapping_edges = 0;
-    #pragma omp parallel for
+    #pragma omp parallel for ordered schedule(static,1)
     for (HyperedgeID he = 0; he < num_edges; ++he) {
         std::vector<int> temp = {};
         for (const HypernodeID& pin : hypergraph.pins(he)) {
@@ -68,42 +67,64 @@ int main(int argc, char* argv[]) {
         }
         std::sort( temp.begin(), temp.end() );
         temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
-        overlapping_edges += temp.size();
+        #pragma omp ordered
+        {
+            overlapping_edges += temp.size();
+        }
         temp.clear();
     }
-
-    std::cout << " ... counted overlapping edges successfully!" << std::endl;
     
     // because overlapping_edges counts every edge two times,
     // we have to divide it by 2
     overlapping_edges = overlapping_edges / 2;
+    std::cout << " ... counted overlapping edges successfully!" << std::endl;
     
     // conversion works for unweighted hypergraphs and weighted hyperedges
     if (hypergraph.type() == HypergraphType::EdgeWeights) {
         out_stream << num_edges << " " << overlapping_edges << " 10" << std::endl;
         
-        #pragma omp parallel for ordered
+        std::vector<int> result = {};
+        #pragma omp parallel for ordered schedule(static,1)
         for (HyperedgeID he = 0; he < num_edges; ++he) {
             std::vector<int> temp = {};
             for (const HypernodeID& pin : hypergraph.pins(he)) {
                 for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
-                        temp.push_back(he2);
+                        temp.push_back(he2+1);
                     }
                 }
             }
             std::sort( temp.begin(), temp.end() );
             temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
-            out_stream << hypergraph.edgeWeight(he) << " ";
             #pragma omp ordered
             {
-                for (auto it = std::begin(temp); it != std::end(temp); ++it) {
-                    out_stream << *it + 1 << " ";
-                }
+                result.push_back(hypergraph.edgeWeight(he));
+                std::copy(temp.begin(), temp.end(), std::inserter(result, result.end()));
+                result.push_back(0);
             }
-            out_stream << std::endl;
+            
+            /*
+             * test the output of temp and result and check their correctness
+            std::cout << "\n temp:" << std::endl;
+            for (auto& i: temp)
+                std::cout << i << ' ';
+            std::cout << "\n result:" << std::endl;
+            for (auto& i: result)
+                std::cout << i << ' ';
+             */
             temp.clear();
         }
+        std::cout << " ... calculations for the resulting file are done!" << std::endl;
+        
+        // stream values from result into file
+        for (auto it = std::begin(result); it != std::end(result); ++it) {
+            if (*it == 0) {
+                out_stream << std::endl;
+            } else {
+                out_stream << *it << " ";
+            }
+        }
+        
         
     } else {
         out_stream << num_edges << " " << overlapping_edges << std::endl;
@@ -114,7 +135,7 @@ int main(int argc, char* argv[]) {
             for (const HypernodeID& pin : hypergraph.pins(he)) {
                 for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
-                        temp.push_back(he2);
+                        temp.push_back(he2+1);
                     }
                 }
             }
@@ -123,10 +144,10 @@ int main(int argc, char* argv[]) {
             #pragma omp ordered
             {
                 for (auto it = std::begin(temp); it != std::end(temp); ++it) {
-                    out_stream << *it + 1 << " ";
+                    out_stream << *it << " ";
                 }
+                out_stream << std::endl;
             }
-            out_stream << std::endl;
             temp.clear();
         }
     }
