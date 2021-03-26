@@ -15,11 +15,13 @@
 
 #include <omp.h>
 #include <chrono>
+#include <boost/program_options.hpp>
 
 using namespace kahypar;
+namespace po = boost::program_options;
 
 int main(int argc, char* argv[]) {
-    if (argc != 3) {
+    if (argc != 3 && argc != 4) {
         std::cout << "No .hgr file specified" << std::endl;
     }
     
@@ -39,7 +41,9 @@ int main(int argc, char* argv[]) {
     const HypernodeID initial_num_nodes = hypergraph.initialNumNodes();
     
     
-    
+    /*
+     * TODO: don't remove pins, remove hyperedges!
+     *
     // decision boundary: which pins should be removed
     double decision_boundary = atof(argv[2]);
     if (decision_boundary > 1.0 or decision_boundary < 0.0) {
@@ -67,19 +71,24 @@ int main(int argc, char* argv[]) {
     std::cout << " ... calculated maxDegree successfully! - - - elapsed time: " << diff1.count() << "s\n";
     
     
-    
     // remove 'big pins' from hypergraph
     for (HypernodeID pin = 0; pin < initial_num_nodes; ++pin) {
         if (hypergraph.nodeDegree(pin) > maxDegree) hypergraph.removeNode(pin);
     }
+     *
+     */
     
     const HyperedgeID num_edges = hypergraph.currentNumEdges();
     
     auto t2 = std::chrono::steady_clock::now();
     std::chrono::duration<double> diff2 = t2-start;
-    std::cout << " ... reduced nodes successfully! - - - elapsed time: " << diff2.count() << "s\n";
+    // std::cout << " ... reduced nodes successfully! - - - elapsed time: " << diff2.count() << "s\n";
     
                                                           
+    // set number of threads used in the parallel regions to measure speedups
+    int max_num_threads = omp_get_max_threads();
+    int num_threads = atof(argv[3]);
+    if (num_threads > max_num_threads || num_threads < 1) num_threads = max_num_threads;
     
     // counting overlapping hyperedges to determine #edges in graph
     long overlapping_edges = 0;
@@ -93,7 +102,7 @@ int main(int argc, char* argv[]) {
         std::vector< std::vector<int> >::iterator it;
         std::vector<int>::iterator i;
         
-        #pragma omp parallel for
+        #pragma omp parallel for reduction(+: overlapping_edges) num_threads(num_threads)
         for (HyperedgeID he = 0; he < num_edges; ++he) {
             std::vector<int> temp;
             temp.push_back(hypergraph.edgeWeight(he));
@@ -108,7 +117,6 @@ int main(int argc, char* argv[]) {
             std::sort( temp.begin(), temp.end() );
             temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
             result.at(he)=temp;
-            #pragma omp critical
             overlapping_edges += temp.size();
             temp.clear();
         }
@@ -143,7 +151,7 @@ int main(int argc, char* argv[]) {
         std::vector< std::vector<int> >::iterator it;
         std::vector<int>::iterator i;
         
-        #pragma omp parallel for
+        #pragma omp parallel for reduction(+: overlapping_edges) num_threads(num_threads)
         for (HyperedgeID he = 0; he < num_edges; ++he) {
             std::vector<int> temp;
             for (const HypernodeID& pin : hypergraph.pins(he)) {
@@ -157,7 +165,6 @@ int main(int argc, char* argv[]) {
             std::sort( temp.begin(), temp.end() );
             temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
             result.at(he)=temp;
-            #pragma omp critical
             overlapping_edges += temp.size();
             temp.clear();
         }
