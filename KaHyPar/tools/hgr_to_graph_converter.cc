@@ -114,10 +114,10 @@ int main(int argc, char* argv[]) {
                 }
             }
             
-            std::sort( temp.begin(), temp.end() );
+            std::sort( temp.begin() + 1, temp.end() );
             temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
-            result.at(he)=temp;
-            overlapping_edges += temp.size();
+            result.at(he) = temp;
+            overlapping_edges += temp.size() - 1;
             temp.clear();
         }
         
@@ -164,7 +164,7 @@ int main(int argc, char* argv[]) {
             
             std::sort( temp.begin(), temp.end() );
             temp.erase( std::unique( temp.begin(), temp.end() ), temp.end() );
-            result.at(he)=temp;
+            result.at(he) = temp;
             overlapping_edges += temp.size();
             temp.clear();
         }
