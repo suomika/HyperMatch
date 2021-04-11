@@ -18,7 +18,15 @@
 
 using namespace kahypar;
 
+std::vector<int> calculate_big_edges(double, Hypergraph&);
+Hypergraph reduce_hypergraph(Hypergraph&, bool);
+std::vector< std::vector<int> > conversion(Hypergraph&, bool, int, std::ofstream&);
+
+
 int main(int argc, char* argv[]) {
+
+    // -------------------------- SETUP --------------------------
+    
     if (argc != 3 && argc != 4) {
         std::cout << "No .hgr file specified" << std::endl;
     }
@@ -36,21 +44,105 @@ int main(int argc, char* argv[]) {
     auto start = std::chrono::steady_clock::now();
     
     Hypergraph hypergraph(io::createHypergraphFromFile(hgr_filename, 2));
-    const HypernodeID initial_num_nodes = hypergraph.initialNumNodes();
-    const HyperedgeID initial_num_edges = hypergraph.initialNumEdges();
     
     bool hasWeights = false;
     if (hypergraph.type() == HypergraphType::EdgeWeights) hasWeights = true;
     
+    // set number of threads used in the parallel regions to measure speedups
+    int max_num_threads = omp_get_max_threads();
+    int num_threads = atof(argv[3]);
+    if (num_threads > max_num_threads || num_threads < 1) num_threads = max_num_threads;
+    
+    auto t1 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff1 = t1 - start;
+    std::cout << " ... FINISHED SETUP - TIME NEEDED: " << diff1.count() << "s\n";
+    
+    // -----------------------------------------------------------
     
     
-    // decision boundary: which hyperedges should be removed
+    
+    // -------------------- REDUCE HYPEREDGES --------------------
+    
     double decision_boundary = atof(argv[2]);
     if (decision_boundary > 1.0 or decision_boundary < 0.0) {
         std::cerr << "decision_boundary argument has to be in [0,1]" << std::endl;
         return 1;
     }
+    std::vector<int> bigEdges = calculate_big_edges(decision_boundary, hypergraph);
     
+    // remove hyperedges with 'big pins' from hypergraph
+    for (long unsigned int i = 0; i < bigEdges.size(); ++i) {
+        hypergraph.removeEdge(bigEdges[i]);
+    }
+    
+    auto t2 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff2 = t2 - t1;
+    std::cout << " ... REDUCED HYPEREDGES! - TIME NEEDED: " << diff2.count() << "s\n";
+    
+    // -----------------------------------------------------------
+    
+    
+    
+    // ---------------- CREATE REDUCED HYPERGRAPH ----------------
+    
+    Hypergraph reduced_hypergraph = reduce_hypergraph(hypergraph, hasWeights);
+    
+    auto t3 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff3 = t3 - t2;
+    std::cout << " ... CREATED REDUCED HYPERGRAPH! - TIME NEEDED: " << diff3.count() << "s\n";
+    
+    // -----------------------------------------------------------
+    
+    
+    
+    // ----------------------- CONVERSION ------------------------
+    
+    std::vector< std::vector<int> > result = conversion(reduced_hypergraph, hasWeights, num_threads, out_stream);
+    
+    auto t4 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff4 = t4 - t3;
+    std::cout << "\033[1;31m ... CONVERSION FINISHED! - TIME NEEDED: " << diff4.count() << "s\033[0m\n";
+    
+    // -----------------------------------------------------------
+    
+    
+    
+    // --------------------- FINAL OUTSTREAM ---------------------
+    
+    std::vector< std::vector<int> >::iterator it;
+    std::vector<int>::iterator i;
+    for (it = result.begin(); it != result.end(); ++it) {
+        for (i = (*it).begin(); i != (*it).end(); i++) {
+            out_stream << *i << " ";
+        }
+        out_stream << "\n";
+    }
+    
+    auto t5 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff5 = t5 - t4;
+    std::cout << " ... CREATED GRAPH FILE! - TIME NEEDED: " << diff5.count() << "s\n";
+    
+    // -----------------------------------------------------------
+    
+    
+    
+    // --------------------- FINAL OUTSTREAM ---------------------
+    
+    out_stream.close();
+    
+    auto t6 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> diff6 = t6 - start;
+    std::cout << " ... DONE! - COMPLETE TIME NEEDED: " << diff6.count() << "s" << std::endl;
+    
+    // -----------------------------------------------------------
+    
+    return 0;
+}
+
+
+std::vector<int> calculate_big_edges(double decision_boundary, Hypergraph& hypergraph) {
+    
+    const HypernodeID initial_num_nodes = hypergraph.initialNumNodes();
     long maxNodeDegree = 0;
     for (HypernodeID pin = 0; pin < initial_num_nodes; ++pin) {
         if (hypergraph.nodeDegree(pin) > maxNodeDegree) maxNodeDegree = hypergraph.nodeDegree(pin);
@@ -71,25 +163,13 @@ int main(int argc, char* argv[]) {
     std::sort( bigEdges.begin(), bigEdges.end() );
     bigEdges.erase( std::unique( bigEdges.begin(), bigEdges.end() ), bigEdges.end() );
     
-    // remove hyperedges with 'big pins' from hypergraph
-    for (long unsigned int i = 0; i < bigEdges.size(); ++i) {
-        hypergraph.removeEdge(bigEdges[i]);
-    }
+    return bigEdges;
+}
+
+
+Hypergraph reduce_hypergraph(Hypergraph& hypergraph, bool hasWeights) {
     
-    auto t2 = std::chrono::steady_clock::now();
-    std::chrono::duration<double> diff2 = t2-start;
-    std::cout << " ... reduced edges successfully! - - - elapsed time: " << diff2.count() << "s\n";
-    
-    
-    
-    // set number of threads used in the parallel regions to measure speedups
-    int max_num_threads = omp_get_max_threads();
-    int num_threads = atof(argv[3]);
-    if (num_threads > max_num_threads || num_threads < 1) num_threads = max_num_threads;
-    
-    
-    
-    // create the reduced hypergraph for correct edge numbering
+    const HyperedgeID initial_num_edges = hypergraph.initialNumEdges();
     const HypernodeID num_nodes = hypergraph.currentNumNodes();
     const HyperedgeID num_edges = hypergraph.currentNumEdges();
     
@@ -120,29 +200,24 @@ int main(int argc, char* argv[]) {
     
     Hypergraph reduced_hypergraph = Hypergraph(num_nodes, num_edges, index_vector, edge_vector, hypergraph.k(), hyperedge_weights_ptr, hypernode_weights_ptr);
     
+    return reduced_hypergraph;
+}
+
+
+std::vector< std::vector<int> > conversion(Hypergraph& hypergraph, bool hasWeights, int num_threads, std::ofstream& out_stream) {
     
-    
-    // counting overlapping hyperedges to determine #edges in graph
+    const HyperedgeID num_edges = hypergraph.currentNumEdges();
+    std::vector< std::vector<int> > result(num_edges, std::vector<int>());
     long overlapping_edges = 0;
     
-    
-    
-    // conversion works for unweighted hypergraphs and weighted hyperedges
     if (hasWeights) {
-        
-        std::cout << " ... resulting graph has node weights!" << std::endl;
-        
-        // define resulting array and iterators for outstream
-        std::vector< std::vector<int> > result(num_edges, std::vector<int>());
-        std::vector< std::vector<int> >::iterator it;
-        std::vector<int>::iterator i;
         
         #pragma omp parallel for reduction(+: overlapping_edges) num_threads(num_threads)
         for (HyperedgeID he = 0; he < num_edges; ++he) {
             std::vector<int> temp;
-            temp.push_back(reduced_hypergraph.edgeWeight(he));
-            for (const HypernodeID& pin : reduced_hypergraph.pins(he)) {
-                for (const HyperedgeID& he2 : reduced_hypergraph.incidentEdges(pin)) {
+            temp.push_back(hypergraph.edgeWeight(he));
+            for (const HypernodeID& pin : hypergraph.pins(he)) {
+                for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
                         temp.push_back(he2 + 1);
                     }
@@ -156,40 +231,19 @@ int main(int argc, char* argv[]) {
             temp.clear();
         }
         
-        auto t3 = std::chrono::steady_clock::now();
-        std::chrono::duration<double> diff3 = t3-start;
-        std::cout << " ... calculations for the resulting file are done! - - - elapsed time: " << diff3.count() << "s\n";
-        
-        
-        // because overlapping_edges counts every edge two times,
-        // we have to divide it by 2
         overlapping_edges = overlapping_edges / 2;
-        std::cout << " ... number of nodes in the resulting graph: " << num_edges << std::endl;
-        std::cout << " ... number of edges in the resulting graph: " << overlapping_edges << std::endl;
+        std::cout << "     -> RESULTING GRAPH HAS " << num_edges << " NODES." << std::endl;
+        std::cout << "     -> RESULTING GRAPH HAS " << overlapping_edges << " EDGES." << std::endl;
         
         out_stream << num_edges << " " << overlapping_edges << " 10" << std::endl;
         
-        
-        // write the data of result into graph file
-        for (it = result.begin(); it != result.end(); ++it) {
-            for (i = (*it).begin(); i != (*it).end(); i++) {
-                out_stream << *i << " ";
-            }
-            out_stream << "\n";
-        }
-        
     } else {
-        
-        // define resulting array and iterators for outstream
-        std::vector< std::vector<int> > result(num_edges, std::vector<int>());
-        std::vector< std::vector<int> >::iterator it;
-        std::vector<int>::iterator i;
         
         #pragma omp parallel for reduction(+: overlapping_edges) num_threads(num_threads)
         for (HyperedgeID he = 0; he < num_edges; ++he) {
             std::vector<int> temp;
-            for (const HypernodeID& pin : reduced_hypergraph.pins(he)) {
-                for (const HyperedgeID& he2 : reduced_hypergraph.incidentEdges(pin)) {
+            for (const HypernodeID& pin : hypergraph.pins(he)) {
+                for (const HyperedgeID& he2 : hypergraph.incidentEdges(pin)) {
                     if (he != he2) {
                         temp.push_back(he2 + 1);
                     }
@@ -203,67 +257,13 @@ int main(int argc, char* argv[]) {
             temp.clear();
         }
         
-        auto t3 = std::chrono::steady_clock::now();
-        std::chrono::duration<double> diff3 = t3-start;
-        std::cout << " ... calculations for the resulting file are done! - - - elapsed time: " << diff3.count() << "s\n";
-        
-        
-        // because overlapping_edges counts every edge two times,
-        // we have to divide it by 2
         overlapping_edges = overlapping_edges / 2;
-        std::cout << " ... number of nodes in the resulting graph: " << num_edges << std::endl;
-        std::cout << " ... number of edges in the resulting graph: " << overlapping_edges << std::endl;
+        std::cout << "     -> RESULTING GRAPH HAS " << num_edges << " NODES." << std::endl;
+        std::cout << "     -> RESULTING GRAPH HAS " << overlapping_edges << " EDGES." << std::endl;
         
         out_stream << num_edges << " " << overlapping_edges << std::endl;
         
-        
-        // write the data of result into graph file
-        for (it = result.begin(); it != result.end(); ++it) {
-            for (i = (*it).begin(); i != (*it).end(); i++) {
-                out_stream << *i << " ";
-            }
-            out_stream << "\n";
-        }
     }
     
-    out_stream.close();
-    auto t4 = std::chrono::steady_clock::now();
-    std::chrono::duration<double> diff4 = t4-start;
-    std::cout << " ... done! - - - elapsed time: " << diff4.count() << "s" << std::endl;
-    return 0;
+    return result;
 }
-
-
-/* ____________________________ LATER ____________________________
- *
- * test the output of temp and result and check their correctness
-    std::cout << "\n temp:" << std::endl;
-    for (auto& i: temp)
-        std::cout << i << ' ';
-    std::cout << "\n result:" << std::endl;
-    for (auto& i: result)
-        std::cout << i << ' ';
- *
- * print Hyperedges: hypergraph.printHyperedges();
- * hypergraph.printHyperedgeInfo();
- *
- * for (const HypernodeID& hn : hypergraph.nodes()) {
-      std::cout << hn << std::endl;
-   }
-   for (const HyperedgeID& he : hypergraph.edges()) {
-      std::cout << he << std::endl;
-   }
- *
- * std::cout << "num of nodes = " << num_nodes << std::endl;
- *
- * for(HypernodeID i : hypergraph.nodes()) hypergraph.printNodeState(i);
-   for(HyperedgeID e : hypergraph.edges())  hypergraph.printEdgeState(e);
- *
- * const HypernodeID initial_num_nodes = hypergraph.initialNumNodes();
- *
- * // maxDegree based on mean node degrees
-   double averageDegree = 0;
-   for (HypernodeID pin = 0; pin < initial_num_nodes; ++pin) {
-       averageDegree += hypergraph.nodeDegree(pin)/initial_num_nodes;
- * _______________________________________________________________
- */
