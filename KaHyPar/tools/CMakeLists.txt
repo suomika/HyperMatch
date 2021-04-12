@@ -83,6 +83,9 @@ set_property(TARGET TnsToHgr3dim PROPERTY CXX_STANDARD_REQUIRED ON)
 add_executable(HgrToUcar3dim hgr_to_ucar_converter_3dim.cc)
 set_property(TARGET HgrToUcar3dim PROPERTY CXX_STANDARD 17)
 set_property(TARGET HgrToUcar3dim PROPERTY CXX_STANDARD_REQUIRED ON)
+add_executable(WriteReducedHgr write_reduced_hgr.cc)
+set_property(TARGET WriteReducedHgr PROPERTY CXX_STANDARD 17)
+set_property(TARGET WriteReducedHgr PROPERTY CXX_STANDARD_REQUIRED ON)
 
 
 # This test needs test instance files, so we copy them to the corresponding build dir
